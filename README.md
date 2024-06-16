@@ -1,4 +1,4 @@
-# ContactManagementAPI
+# ContactManagementUI
 
 This project implements basic CRUD operations to manage user data including their first name, last name, and email address. It allows users to:
 
@@ -19,7 +19,7 @@ Installation
 Usage
 Features
 
-Installation
+# Installation
 
 Install Node (if not already installed):
 
@@ -38,7 +38,7 @@ Install Angular Material:
 ng add @angular/material
 
 
-Usage
+# Usage
 
 To begin using the Contact Management Project, you need to start the API first.
 After starting the API, go to the angular and,
@@ -47,7 +47,7 @@ After starting the API, go to the angular and,
 - run 'ng serve' in terminal to start the angular application.
 - use http://localhost:4200/ to access the frontend.
 
-Features
+# Features
 
 Create:Add new user data with fields like first name, last name, and email address.
 
@@ -66,3 +66,46 @@ Pagination:Display a limited number of user records per page to improve performa
 Enable navigation through pages (e.g., next page, previous page) to view additional user records.
 
 These features collectively enhance the usability and functionality of your CRUD application, providing users with efficient ways to manage and interact with user data.
+
+# Design Decisions:
+1. Angular Material for UI Design:
+
+Reason: Chose Angular Material for its pre-built components that provide a consistent, modern UI design.
+Benefits: Ensures a clean and responsive design across different devices and screen sizes.
+Usability: Angular Material's components (like buttons, forms, dialogs) are intuitive for users, enhancing usability.
+
+2.Simplicity in Design:
+
+Reason: Prioritized ease of use and minimalism.
+Benefits: Reduces cognitive load for users and makes navigation straightforward.
+Implementation: Utilized clean layouts, clear navigation paths, and minimalistic styling to avoid clutter.
+3. Popup Modals for Editing and Deleting Data:
+
+Reason: Opted for popup modals to handle editing and deleting operations.
+Benefits: Provides focused interaction, isolating the user's attention to the task at hand without navigating away.
+Implementation: Used Angular Material's dialog component or custom modals to ensure consistency in user experience.
+
+# Application Structure:
+Backend: .NET Core:
+
+Architecture: Followed MVC (Model-View-Controller) or Web API architecture.
+API Endpoints: Organized API endpoints logically (e.g., /api/users, /api/products) to manage CRUD operations.
+Data Layer: Used Entity Framework Core for data access, ensuring efficient and scalable database interactions.
+Frontend: Angular:
+
+Component-Based Structure: Organized components (e.g., user list, user details, product list) for modularity and reusability.
+Services: Implemented Angular services to handle API calls and business logic.
+Routing: Utilized Angular Router for navigation between views and components, ensuring a single-page application experience.
+Integration with Angular Material:
+
+Component Theming: Customized Angular Material's theme to match the application's design language.
+Responsive Design: Ensured responsiveness using Angular Material's responsive utilities and grid system.
+Deployment and Scalability:
+
+Deployment: Deployed on a cloud platform (e.g., Azure, AWS) for scalability and availability.
+Continuous Integration/Continuous Deployment (CI/CD): Implemented CI/CD pipelines to automate testing and deployment processes, ensuring rapid iteration and deployment.
+
+# Summary:
+This .NET Core and Angular application leverages Angular Material for a simple and user-friendly design, enhancing usability through intuitive UI components and popup modals for data editing and deletion. The application structure follows best practices, focusing on modularity, scalability, and a responsive design approach to deliver a seamless user experience.
+
+This approach ensures that users can interact with your application effortlessly while maintaining flexibility and scalability for future enhancements.
