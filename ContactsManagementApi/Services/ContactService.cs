@@ -7,7 +7,7 @@ namespace ContactsManagementApi.Services
 {
     public class ContactService
     {
-        private readonly string _filePath = "C:\\Users\\anshu\\ContactsManagementApi\\data.json";
+        private readonly string _filePath = Path.Combine(Directory.GetCurrentDirectory(),@"data.json");
 
         public List<Contact> ReadData()
         {
